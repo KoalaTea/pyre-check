@@ -25,9 +25,10 @@ namespace Configuration {
 }
 
 export async function activate(_: vscode.ExtensionContext) {
+	const executable = vscode.workspace.getConfiguration("pyre").get<string>("pyrePath")
 
     let serverOptions = {
-	command: "pyre",
+	command: executable || "pyre",
 	args: ["persistent"]
     };
     

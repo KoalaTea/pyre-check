@@ -1,12 +1,12 @@
 {
-  "name": "pyre-vscode",
-  "version": "0.0.1",
+  "name": "pyre-vscode-mine",
+  "version": "0.0.2",
   "publisher": "fb-pyre-check",
   "engines": {
     "vscode": "^1.15.0"
   },
   "license": "MIT",
-  "displayName": "pyre-vscode",
+  "displayName": "pyre-vscode-mine",
   "description": "VSCode extension for Pyre-check",
   "keywords": [
     "python",
@@ -36,5 +36,18 @@
     "tslint-microsoft-contrib": "^5.0.1",
     "typescript": "^2.6.1",
     "vscode": "^1.1.7"
+  },
+  "contributes": {
+    "configuration": {
+      "title": "Pyre configuration",
+      "type": "object",
+      "properties": {
+        "pyre.pyrePath": {
+          "type": "string",
+          "default": "pyre",
+          "descriptiong": "pyre executable"
+        }
+      }
+    }
   }
 }
